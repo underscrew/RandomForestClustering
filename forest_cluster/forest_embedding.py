@@ -98,7 +98,7 @@ def generate_synthetic_features(X, method='bootstrap', random_state=1234):
     random_state = check_random_state(random_state)
     n_features = int(X.shape[1])
     synth_X = np.empty_like(X)
-    for column in xrange(n_features):
+    for column in range(n_features):
         if method == 'bootstrap':
             synth_X[:, column] = bootstrap_sample_column(
                 X[:, column], random_state=random_state)
